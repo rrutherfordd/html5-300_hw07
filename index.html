@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta description="Assignment 7">
+    <title>REST API</title>
+    
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <!--
+  ** Create a Web app like the one for the Object List and Local Storage assignments with a table for the items and a form for creating and editing them. The only difference is that you will also use the REST API to store the data, reading from it at start-up and saving to it whenever data changes. 
+  ** The URL for your collection will be https://pacific-meadow-64112.herokuapp.com/data-api/(your name) where (your name) stands for your first initial plus your last name. 
+  -->
+  <body>
+    <h1>Collection</h1>
+    <br/>
+    <div id="table-page">
+      <button id="new-person" type="button">Add New Person</button>
+      <br/><br/>
+      <table>
+        <thead>
+          <tr>
+            <th>
+              Name
+            </th>
+            <th>
+              Age
+            </th>
+            <th>
+              Actions
+            </th>
+          </tr>
+        </thead>
+        <tbody id="people"></tbody>
+      </table>
+    </div>
+    <br/><br/>
+    <div id="form-page">
+      <form>
+        <label for="name">Name</label>
+        <input id="name" type="text">
+        <br>
+        <label for="age">Age</label>
+        <input id="age" type="number">
+        <br>
+        <button id="submit" type="submit">Submit</button>
+        <button id="cancel" type="button">Cancel</button>
+      </form>
+    </div>
+    <br/>
+    <h1>Response</h1>
+    <pre id="response"></pre>
+    
+    <!-- JavaScript -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous">
+    </script>
+  </body>
+</html>
